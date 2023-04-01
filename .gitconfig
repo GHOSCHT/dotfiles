@@ -1,0 +1,15 @@
+[user]
+name = GHOSCHT
+email = 31184695+GHOSCHT@users.noreply.github.com
+	signingkey = /home/ghoscht/.ssh/git.pub
+
+[commit]
+gpgsign = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[gpg]
+	format = ssh
