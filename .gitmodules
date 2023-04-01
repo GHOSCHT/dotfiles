@@ -1,3 +1,6 @@
 [submodule ".config/awesome/lain"]
 	path = .config/awesome/lain
 	url = git@github.com:lcpz/lain.git
+[submodule ".config/spicetify/Themes/SpotifyNoPremium"]
+	path = .config/spicetify/Themes/SpotifyNoPremium
+	url = git@github.com:Daksh777/SpotifyNoPremium.git
