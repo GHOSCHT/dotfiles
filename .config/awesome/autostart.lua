@@ -22,7 +22,8 @@ function autostart.exec(awful)
     awful.spawn.with_shell("openrgb --server --profile default")
     -- awful.spawn.with_shell("autocutsel -fork -selection CLIPBOARD")
     -- awful.spawn.with_shell("autocutsel -fork -selection PRIMARY")
-    awful.spawn.with_shell("autocutsel")
+    awful.spawn.with_shell("clipmenud")
+    awful.spawn.with_shell("xmousepasteblock")
 end
 
 return autostart
