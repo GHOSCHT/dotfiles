@@ -57,6 +57,15 @@
 
 "flameshot gui --clipboard --accept-on-select --path /home/ghoscht/Pictures/screenshots"
   Print
+
+"${HOME}/scripts/volume.sh mute"
+   XF86AudioMute
+
+"${HOME}/scripts/volume.sh raise"
+   XF86AudioRaiseVolume
+
+"${HOME}/scripts/volume.sh lower"
+   XF86AudioLowerVolume
 ##################################
 # End of xbindkeys configuration #
 ##################################
