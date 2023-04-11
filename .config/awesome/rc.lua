@@ -108,6 +108,13 @@ local cpu = lain.widget.cpu {
     end
 }
 
+local baticon = wibox.widget.imagebox(theme.widget_bat)
+local bat = lain.widget.bat {
+    settings = function()
+        widget:set_markup(" " .. bat_now.perc .."%")
+    end
+}
+
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(awful.button({}, 1, function(t)
     t:view_only()
@@ -218,6 +225,13 @@ awful.screen.connect_for_each_screen(function(s)
         widget = wibox.container.place
     }
 
+    local baticonContainer = wibox.widget {
+        baticon,
+        valign = 'center',
+        halign = 'center',
+        widget = wibox.container.place
+    }
+
     local memiconContainer = wibox.widget {
         memicon,
         valign = 'center',
@@ -281,6 +295,9 @@ awful.screen.connect_for_each_screen(function(s)
     cpuicon.forced_height = s.mywibox.height * 0.7
     cpuicon.forced_width = s.mywibox.height * 0.7
 
+    baticon.forced_height = s.mywibox.height * 0.7
+    baticon.forced_width = s.mywibox.height * 0.7
+
     -- Add widgets to the wibox
     s.mywibox:setup{
         layout = wibox.layout.align.horizontal,
@@ -298,7 +315,10 @@ awful.screen.connect_for_each_screen(function(s)
             mem,
             separator,
             cpuiconContainer,
-            cpu.widget,
+            cpu,
+            separator,
+            baticonContainer,
+            bat,
             separator,
             calendariconContainer,
             calendar,

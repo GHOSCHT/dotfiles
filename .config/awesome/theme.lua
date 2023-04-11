@@ -59,6 +59,7 @@ theme.widget_mem                                = theme.dir .. "/icons/custom/me
 theme.widget_clock                              = theme.dir .. "/icons/custom/clock.png"
 theme.widget_calendar                           = theme.dir .. "/icons/custom/calendar.png"
 theme.widget_cpu                                = theme.dir .. "/icons/custom/chip.png"
+theme.widget_bat                                = theme.dir .. "/icons/custom/bat.png"
 theme.widget_temp                               = theme.dir .. "/icons/temp.png"
 theme.widget_net                                = theme.dir .. "/icons/net.png"
 theme.widget_hdd                                = theme.dir .. "/icons/hdd.png"
