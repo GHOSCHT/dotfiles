@@ -66,6 +66,12 @@
 
 "${HOME}/scripts/volume.sh lower"
    XF86AudioLowerVolume
+
+"${HOME}/scripts/backlight.sh lower"
+  Alt + F7
+
+"${HOME}/scripts/backlight.sh raise"
+  Alt + F8
 ##################################
 # End of xbindkeys configuration #
 ##################################
