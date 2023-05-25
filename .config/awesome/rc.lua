@@ -332,6 +332,12 @@ end)
 
 -- }}}
 
+client.connect_signal("property::maximized", function(c)
+	if c.maximized then
+		c.maximized = false
+	end
+end)
+
 -- {{{ Key bindings
 globalkeys = gears.table.join(awful.key({modkey}, "x", function()
     awful.util.spawn("/home/ghoscht/.config/rofi/powermenu/type-2/powermenu.sh")
